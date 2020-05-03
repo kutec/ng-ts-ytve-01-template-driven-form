@@ -1,0 +1,14 @@
+* {
+  font-family: Lato;
+}
+button{
+  border: 0;
+  padding: 5px 10px;
+  font-size: 24px;
+}
+button:not(:disabled){
+  background: green;
+  color: #fff;
+  cursor: pointer;
+}
+input { padding: 5px; margin-left: 5px;}

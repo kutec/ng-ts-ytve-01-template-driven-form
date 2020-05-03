@@ -1,0 +1,23 @@
+<section>
+	<h1>Template Driven Form Example:</h1>
+	<form #form="ngForm" (ngSubmit)="formSubmit()">
+		<p>
+			<label>First Name:</label>
+			<input name="first" type="text"
+                [(ngModel)]="data.firstName" required>
+        </p>
+			<p>
+				<label>Last Name:</label>
+				<input name="last" type="text"
+                [(ngModel)]="data.password" required>
+        </p>
+				<p>
+					<button type="submit" [disabled]="!form.valid">Submit</button>
+				</p>
+
+        <ng-container *ngIf="form.valid">
+        <p>Form values:</p>
+        <pre>{{form.value | json}}</pre>
+        </ng-container>
+	</form>
+</section>
